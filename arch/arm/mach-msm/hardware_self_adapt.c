@@ -31,7 +31,7 @@ static __u32	frame_buffer_start = 0;	/* physical start address */
 #endif
 
 #ifdef CONFIG_FRAMEBUF_SELF_ADAPT_HACK
-#define BL_BUF_BLOCK = 1048576;
+#define BL_BUF_BLOCK 1048576;
 static bool frame_buffer_boosted = false;
 #endif
 
