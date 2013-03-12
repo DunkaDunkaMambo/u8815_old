@@ -352,7 +352,7 @@ static int app_version_read_proc(char *page, char **start, off_t off,
 	/* <DTS2012020706466 xiewen 20120207 begin */
 	char *wifi_device_name = NULL;
 	/* DTS2012020706466 xiewen 20120207 end> */
-	char *baseband_version = NULL;
+	char *framebuffer_boosted = NULL;
 	/* < DTS2012021402175 yangxiaocong 20120213 begin */
 	/* < DTS2011122304248 liurennianKF62391 20111227 begin */
 	char audio_property[AUDIO_PROPERTY_LEN] = {0};
@@ -393,7 +393,7 @@ static int app_version_read_proc(char *page, char **start, off_t off,
 	/* <DTS2012020706466 xiewen 20120207 begin */
 	wifi_device_name = get_wifi_device_name();
 	/* DTS2012020706466 xiewen 20120207 end> */
-	baseband_version = get_baseband_version();
+	framebuffer_boosted = get_framebuffer_boosted();
 	/* < DTS2012021402175 yangxiaocong 20120213 begin */
 	/* < DTS2011122304248 liurennianKF62391 20111227 begin */
 	get_audio_property(audio_property);
@@ -429,11 +429,11 @@ static int app_version_read_proc(char *page, char **start, off_t off,
 	"compass_gs_position:\n%s\n"
 	"sensors_list:\n%s\n"
 	"hw_version:\n%s\n"
-	"baseband_version:\n%s\n"
+	"framebuffer_boosted:\n%s\n"
     "wifi_chip:\n%s\n"
 	"audio_property:\n%s\n"
 	"touch_info:\n%s\n",
-	appsboot_version, ker_ver, str_flash_nand_id, s_board_id, lcd_name, camera_id, ts_id, charge_flag, compass_gs_name, sensors_list_name, hw_version_id, baseband_version, wifi_device_name, audio_property, touch_info);
+	appsboot_version, ker_ver, str_flash_nand_id, s_board_id, lcd_name, camera_id, ts_id, charge_flag, compass_gs_name, sensors_list_name, hw_version_id, framebuffer_boosted, wifi_device_name, audio_property, touch_info);
 	/* DTS2012020706466 xiewen 20120207 end> */
 #else
 	len = snprintf(page, PAGE_SIZE, "APPSBOOT:\n"
@@ -449,10 +449,10 @@ static int app_version_read_proc(char *page, char **start, off_t off,
 	"compass_gs_position:\n%s\n"
 	"sensors_list:\n%s\n"
 	"hw_version:\n%s\n"
-	"baseband_version:\n%s\n"
+	"framebuffer_boosted:\n%s\n"
 	"audio_property:\n%s\n"
 	"touch_info:\n%s\n",
-	appsboot_version, ker_ver, str_flash_nand_id, s_board_id, lcd_name, camera_id, ts_id, compass_gs_name, sensors_list_name, hw_version_id, baseband_version, audio_property, touch_info);
+	appsboot_version, ker_ver, str_flash_nand_id, s_board_id, lcd_name, camera_id, ts_id, compass_gs_name, sensors_list_name, hw_version_id, framebuffer_boosted, audio_property, touch_info);
 	/* DTS2011122304248 liurennianKF62391 20111227 end > */
 	/* DTS2012021402175 yangxiaocong 20120213 end > */
 	/* DTS2012031203104 duanfei 20120313 end >*/

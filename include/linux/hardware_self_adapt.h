@@ -365,7 +365,7 @@ char *get_compass_gs_position_name(void);
 char *get_sensors_list_name(void);
 /* DTS2011122701816  liujinggang 20111227 end > */
 char *get_wifi_device_name(void);
-char *get_baseband_version(void);
+char *get_framebuffer_boosted(void);
 lcd_panel_type get_lcd_panel_type(void);
 hw_lcd_ctrl_bl_type get_hw_lcd_ctrl_bl_type(void);
 lcd_type get_hw_lcd_resolution_type(void);

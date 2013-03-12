@@ -192,22 +192,22 @@ char *get_wifi_device_name(void)
 /* DTS2012032106050 niguodong 20120321 end> */                                                    
 /* DTS2011121403517 xiewen 20111214 end> */
 
-char *get_baseband_version(void)
+char *get_framebuffer_boosted(void)
 {
-  char *baseband_version = NULL;
+  char *framebuffer_boosted = NULL;
 #ifdef CONFIG_FRAMEBUF_SELF_ADAPT_HACK
   if(frame_buffer_boosted)
   {
-    baseband_version = "109808";
+    framebuffer_boosted = "1";
   }
   else
   {
 #endif
-    baseband_version = "2030";
+    framebuffer_boosted = "0";
 #ifdef CONFIG_FRAMEBUF_SELF_ADAPT_HACK
   }
 #endif
-  return baseband_version;
+  return framebuffer_boosted;
 }
 
 /* < DTS2011122304248 liurennianKF62391 20111227 begin */
